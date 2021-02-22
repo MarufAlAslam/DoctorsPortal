@@ -140,7 +140,7 @@ select:focus{
     overflow-x: hidden !important;
 }
 html{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 .main-body{
     max-width: 98%;
