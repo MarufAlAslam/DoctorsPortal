@@ -438,6 +438,7 @@ select.form-control {
     }
     *{
         text-align: center !important;
+        overflow-x: hidden !important;
     }
 }
 
