@@ -140,7 +140,7 @@ select:focus{
     overflow-x: hidden !important;
 }
 html{
-    overflow-x: hidden !important;
+    overflow-x: hidden;
 }
 .main-body{
     max-width: 98%;
@@ -245,7 +245,7 @@ h1{
 
 
 .accordion-button::after {
-    background-image: url(accordion.png) !important;
+    background-image: url(../img/accordion.png) !important;
 }
 .accordion-body .card{
     border-radius: unset;
@@ -303,8 +303,8 @@ input,select{
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 45px;
+    height: 25px;
   }
   
   .switch input { 
@@ -325,18 +325,17 @@ input,select{
     transition: .4s;
   }
   
-  .sliderr:before {
+  .sliderr::before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 22px;
+    width: 22px;
+    left: -4px;
+    bottom: 1px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
+}
   input:checked + .sliderr {
     background-color: #6DD400;
   }
@@ -372,8 +371,12 @@ input,select{
     padding: 7px 0 !important;
 }
 
+.drpdwn.form-control {
+    padding-left: 10px !important;
+}
+
 .drpdwn::after {
-    background-image: url(accordion.png) !important;
+    background-image: url(../img/accordion.png) !important;
 }
 
   /* profile */
@@ -386,7 +389,7 @@ input,select{
 }
 
 select.form-control {
-    background-image: url(accordion\ \(Custom\).png);
+    background-image: url(../img/accordion\ \(Custom\).png);
     background-repeat: no-repeat;
     background-position: 97% center;
     background-size: -1%;
@@ -409,6 +412,24 @@ select.form-control {
 
 
 @media screen and (max-width:768px){
+    h3 {
+        text-align: left !important;
+    }
+    .col-2 {
+        width: 100% !important;
+        margin-top: 15px;
+    }
+    .col-10 {
+        width: 100% !important;
+    }
+    .col {
+        flex: 1 0 100%;
+        margin: auto !important;
+        margin-left: 12px !important;
+    }
+    .card {
+        margin: 10px 0 !important;
+    }
     .sidebar {
         height: 100vh;
         display: flex;
@@ -419,6 +440,9 @@ select.form-control {
         width: 100%;
         overflow: hidden;
         opacity: 0;
+    }
+    .form-control {
+        text-align: left !important;
     }
     .d-block.text-decoration-none.text-white.text-uppercase.sidebr-menu {
         text-align: center;

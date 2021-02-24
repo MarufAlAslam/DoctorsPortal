@@ -85,15 +85,21 @@ $('#card3').click(function(event){
 })
 var c = 0
 $('.btn .fa-bars').click(function(){
-  if(c%2==0){
-    $('.sidebar').css("opacity","1").css("z-index","999")
-    $('.main-body .col-md-10').hide()
-    c++
+  if(window.innerWidth<=768){
+    if(c%2==0){
+      $('.sidebar').css("opacity","1").css("z-index","999")
+      $('.main-body .col-md-10').hide()
+      c++
+    }
+    else{
+      $('.sidebar').css("opacity","0").css("z-index","-1")
+      $('.main-body .col-md-10').show()
+      c++
+    }
   }
   else{
-    $('.sidebar').css("opacity","0").css("z-index","-1")
+    $('.sidebar').css("opacity","1").css("z-index","999")
     $('.main-body .col-md-10').show()
-    c++
   }
 })
 
